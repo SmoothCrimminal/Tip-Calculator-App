@@ -1,0 +1,268 @@
+.calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+  height: 60vh;
+  padding: 15px;
+  margin-top: 120px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 5px 5px 2px #888888;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  height: 100%;
+  padding: 25px;
+}
+
+.left-section #bill {
+  flex-basis: 30%;
+  align-self: center;
+  width: 100%;
+}
+
+.left-section #bill h2 {
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #00494d;
+}
+
+.left-section #bill #bill-input {
+  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: right;
+  height: 35px;
+  font-size: 25px;
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.left-section #bill #bill-input:focus {
+  outline: none;
+  border: 2px solid #26c0ab;
+  border-radius: 4px;
+}
+
+.left-section #bill svg {
+  position: relative;
+  top: -25px;
+  left: 10px;
+  z-index: 1;
+}
+
+.left-section #tip-picker {
+  height: 35%;
+  width: 100%;
+}
+
+.left-section #tip-picker h2 {
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #00494d;
+}
+
+.left-section #tip-picker #tip-buttons {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.left-section #tip-picker #tip-buttons button {
+  width: 30%;
+  height: 50%;
+  margin: 1%;
+  background-color: #00494d;
+  border-radius: 5px;
+  border: transparent;
+  color: white;
+  text-align: center;
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.left-section #tip-picker #tip-buttons button.active {
+  background-color: #5ebaae;
+}
+
+.left-section #tip-picker #tip-buttons #discount-custom {
+  width: 30%;
+  height: 50%;
+  margin: 1%;
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  border-radius: 5px;
+  text-align: right;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.left-section #tip-picker #tip-buttons #discount-custom:focus {
+  outline: none;
+  border: 2px solid #26c0ab;
+  border-radius: 4px;
+}
+
+.left-section #people-amount {
+  height: 30%;
+  margin-top: 15%;
+  align-self: center;
+  width: 100%;
+}
+
+.left-section #people-amount h2 {
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #00494d;
+}
+
+.left-section #people-amount #people-amount-input {
+  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: right;
+  height: 35px;
+  font-size: 25px;
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  align-self: center;
+}
+
+.left-section #people-amount #people-amount-input:focus {
+  outline: none;
+  border: 2px solid #26c0ab;
+  border-radius: 4px;
+}
+
+.left-section #people-amount svg {
+  position: relative;
+  top: -25px;
+  left: 10px;
+}
+
+.right-section {
+  display: flex;
+  border-radius: 12px;
+  flex-basis: 50%;
+  justify-content: space-between;
+  padding: 40px;
+  flex-direction: column;
+  background-color: #00494d;
+  height: 100%;
+}
+
+.right-section h3 {
+  color: white;
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.right-section p {
+  color: #7f9c9f;
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+}
+
+.right-section h1 {
+  color: #26c0ab;
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  position: relative;
+  left: 65%;
+  bottom: 50%;
+}
+
+.right-section button {
+  height: 17%;
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  color: #00494d;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  border: transparent;
+  background-color: #26c0ab;
+  cursor: pointer;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#title {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  color: #5e7a7d;
+  transform: translateX(-50%);
+  font-size: 15px;
+  letter-spacing: 4px;
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f4fafa;
+}
+
+@media screen and (max-width: 925px) {
+  #title {
+    top: 2%;
+    font-size: 1.5rem;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .calculator {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 98vw;
+    height: 100vh;
+    margin-top: 10rem;
+    padding: 10px;
+  }
+  .left-section {
+    margin-top: 0;
+  }
+  .right-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 20%;
+  }
+  .right-section h1 {
+    color: #26c0ab;
+    font-family: "Space Mono", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    position: relative;
+    left: 65%;
+    bottom: 50%;
+  }
+  .right-section button {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+/*# sourceMappingURL=main.css.map */

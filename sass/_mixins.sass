@@ -1,0 +1,21 @@
+@mixin fontStyle
+    font-family: $mainFont
+    font-size: 15px
+    letter-spacing: 2px
+    color: $calculatorColor
+
+@mixin inputStyle
+    width: 100%
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    text-align: right
+    height: 35px
+    font-size: 25px
+    font-family: $mainFont
+    font-weight: 700
+
+@mixin mobile
+    @media screen and (max-width: 925px)
+        .containter
+            display: none

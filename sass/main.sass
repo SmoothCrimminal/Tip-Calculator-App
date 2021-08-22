@@ -1,0 +1,66 @@
+@import 'variables'
+@import 'mixins'
+@import 'calculator'
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+#title
+    position: absolute
+    top: 15%
+    left: 50%
+    color: hsl(186, 14%, 43%)
+    transform: translateX(-50%)
+    font-size: 15px
+    letter-spacing: 4px
+    font-family: $mainFont
+
+.container
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100vw
+    height: 100vh
+    background-color: $backgroundColor
+
+@media screen and (max-width: 925px)
+
+    #title
+        top: 2%
+        font-size: 1.5rem
+    .container
+        flex-direction: column
+
+    .calculator
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        width: 98vw
+        height: 100vh
+        margin-top: 10rem
+        padding: 10px
+
+    .left-section
+        margin-top: 0
+
+    .right-section
+        display: flex
+        justify-content: space-between
+        padding: 20px
+        width: 100%
+        height: 20%
+
+        & h1
+            color: hsl(172, 67%, 45%)
+            font-family: $mainFont
+            font-weight: 700
+            font-size: 2rem
+            position: relative
+            left: 65%
+            bottom: 50%
+
+        & button
+            font-size: 20px
+            font-weight: 700
